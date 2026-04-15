@@ -127,10 +127,8 @@ These metrics help compare model performance and identify the best-performing al
 
 ---
 
-## ▶️ How to Run the Project (Step-by-Step)
-
-### 🔹 Step 1: Clone the Repository
-```bash
+▶️ How to Run the Project (Step-by-Step)
+🔹 Step 1: Clone the Repository
 git clone https://github.com/your-username/Machine-Learning-Models-for-Mobile-Price-Classification.git
 cd Machine-Learning-Models-for-Mobile-Price-Classification
 🔹 Step 2: Open Google Colab
@@ -148,7 +146,7 @@ Upload any one of the following:
 06_Naive_Bayes.ipynb
 🔹 Step 4: Upload Dataset
 Click on the folder icon (📁) in Colab
-Upload:
+Upload the file:
 mobile_price_dataset.csv
 🔹 Step 5: Install Dependencies (if needed)
 !pip install numpy pandas matplotlib seaborn scikit-learn
@@ -167,16 +165,16 @@ pip install numpy pandas matplotlib seaborn scikit-learn notebook
 jupyter notebook
 4. Open any .ipynb file and run all cells
 ⚠️ Important Notes
-Ensure dataset file is in the same directory as notebook
+Ensure dataset file is in the same directory as the notebook
 File name should match exactly
-Update file path if needed inside notebook
+Update file path inside the notebook if needed
 🎯 Objective
 Compare multiple machine learning algorithms
 Understand their performance differences
 Gain practical experience in classification problems
 💡 Key Learnings
 Feature scaling significantly affects models like KNN and SVM
-Ensemble methods like Random Forest provide better accuracy
+Ensemble methods like Random Forest often provide better accuracy
 Different models perform differently on the same dataset
 Clean datasets reduce preprocessing complexity
 🔮 Future Improvements
