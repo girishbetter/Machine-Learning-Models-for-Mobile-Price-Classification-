@@ -1,25 +1,22 @@
-📱 Machine Learning Models for Mobile Price Classification
+# 📱 Machine Learning Models for Mobile Price Classification
 
-This repository contains implementations of multiple machine learning algorithms to classify mobile phone prices into different categories based on their specifications.
+This project focuses on building and comparing multiple machine learning models to classify mobile phone prices into different categories based on their specifications.
 
-The project demonstrates how different models perform on the same dataset and compares their effectiveness.
+The implementation demonstrates how different algorithms behave on the same dataset and highlights their performance differences.
 
-🚀 Project Overview
+---
 
-The goal of this project is to predict the price range of mobile phones using various features such as RAM, battery power, screen size, etc.
+## 🚀 Project Overview
 
-We implemented and compared the following models:
+The objective of this project is to predict the **price range** of mobile phones using features such as RAM, battery power, camera quality, and other hardware specifications.
 
-Logistic Regression
-K-Nearest Neighbors (KNN)
-Decision Tree
-Random Forest
-Support Vector Machine (SVM)
-Naive Bayes
+The problem is treated as a **multi-class classification task**, where the target variable consists of 4 price categories (0, 1, 2, 3).
 
-All models are implemented using Google Colab notebooks.
+---
 
-📂 Repository Structure
+## 📂 Repository Structure
+
+
 Machine-Learning-Models-for-Mobile-Price-Classification/
 │
 ├── 01_Logistic_Regression.ipynb
@@ -31,73 +28,163 @@ Machine-Learning-Models-for-Mobile-Price-Classification/
 │
 ├── mobile_price_dataset.csv
 └── README.md
-📊 Dataset
-The dataset is taken from Kaggle
-It is a well-known dataset for mobile price classification
-Contains features like:
-Battery Power
-RAM
-Mobile Weight
-Camera Specs
-Screen Dimensions
-Connectivity Features
 
-Target variable:
 
-Price Range (0 to 3 categories)
-⚙️ Technologies Used
-Python
-Google Colab
-NumPy
-Pandas
-Matplotlib / Seaborn
-Scikit-learn
-🧠 Models Implemented
-1. Logistic Regression
+---
 
-Basic linear model used for classification.
+## 📊 Dataset Information
 
-2. K-Nearest Neighbors (KNN)
+- Dataset Source: Kaggle (Mobile Price Classification Dataset)
+- Type: Structured CSV dataset
+- Task: Multi-class classification
 
-Instance-based learning algorithm using distance metrics.
+### 🔹 Features Include:
+- Battery Power
+- RAM
+- Internal Memory
+- Mobile Weight
+- Camera Specifications (Front & Primary)
+- Screen Width & Height
+- Connectivity (WiFi, Bluetooth, 4G, etc.)
 
-3. Decision Tree
+### 🎯 Target Variable:
+- `price_range` (0 to 3 categories)
 
-Tree-based model for decision making and classification.
+---
 
-4. Random Forest
+## ⚙️ Technologies Used
 
-Ensemble method using multiple decision trees.
+- Python
+- Google Colab
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
 
-5. Support Vector Machine (SVM)
+---
 
-Effective for high-dimensional data classification.
+## 🧠 Models Implemented
 
-6. Naive Bayes
+The following machine learning models were implemented and evaluated:
 
-Probabilistic classifier based on Bayes' theorem.
+1. Logistic Regression  
+2. K-Nearest Neighbors (KNN)  
+3. Decision Tree  
+4. Random Forest  
+5. Support Vector Machine (SVM)  
+6. Naive Bayes  
 
-📈 Evaluation Metrics
+---
 
-Each model is evaluated using:
+## 🔬 Implementation Details
 
-Accuracy Score
-Confusion Matrix
-Classification Report
+Each model was implemented in a separate Google Colab notebook with a consistent workflow:
+
+### 🔹 1. Data Loading
+- Dataset was loaded using Pandas
+- Basic inspection using `.head()`, `.info()`, `.describe()`
+
+### 🔹 2. Data Preprocessing
+- Checked for missing values (dataset is mostly clean)
+- Feature and target variables separated
+- No heavy feature engineering required due to clean dataset
+
+### 🔹 3. Train-Test Split
+- Data split into training and testing sets using:
+  - `train_test_split` (typically 80-20 split)
+
+### 🔹 4. Feature Scaling
+- Applied **StandardScaler** where required (especially for KNN and SVM)
+
+### 🔹 5. Model Training
+- Each algorithm was trained using Scikit-learn implementations:
+  - LogisticRegression()
+  - KNeighborsClassifier()
+  - DecisionTreeClassifier()
+  - RandomForestClassifier()
+  - SVC()
+  - GaussianNB()
+
+### 🔹 6. Prediction
+- Predictions made on test data using `.predict()`
+
+### 🔹 7. Evaluation
+Each model was evaluated using:
+- Accuracy Score
+- Confusion Matrix
+- Classification Report
+
+---
+
+## 📈 Evaluation Metrics
+
+- Accuracy Score  
+- Confusion Matrix  
+- Precision, Recall, F1-Score  
+
+These metrics help compare model performance and identify the best-performing algorithm.
+
+---
+
+## ▶️ How to Run the Project (Step-by-Step)
+
+### 🔹 Step 1: Clone the Repository
+```bash
+git clone https://github.com/your-username/Machine-Learning-Models-for-Mobile-Price-Classification.git
+cd Machine-Learning-Models-for-Mobile-Price-Classification
+🔹 Step 2: Open Google Colab
+Go to: https://colab.research.google.com
+Click on File → Upload Notebook
+🔹 Step 3: Upload Notebook
+
+Upload any one of the following:
+
+01_Logistic_Regression.ipynb
+02_KNN.ipynb
+03_Decision_Tree.ipynb
+04_Random_Forest.ipynb
+05_SVM.ipynb
+06_Naive_Bayes.ipynb
+🔹 Step 4: Upload Dataset
+Click on the folder icon (📁) in Colab
+Upload:
+mobile_price_dataset.csv
+🔹 Step 5: Install Dependencies (if needed)
+!pip install numpy pandas matplotlib seaborn scikit-learn
+🔹 Step 6: Run the Notebook
+Click Runtime → Run All
+Or execute cells step by step
+🔹 Step 7: View Results
+Model training output
+Accuracy score
+Evaluation metrics
+💻 Alternative: Run Locally
+1. Install Python (>= 3.8)
+2. Install Dependencies
+pip install numpy pandas matplotlib seaborn scikit-learn notebook
+3. Start Jupyter Notebook
+jupyter notebook
+4. Open any .ipynb file and run all cells
+⚠️ Important Notes
+Ensure dataset file is in the same directory as notebook
+File name should match exactly
+Update file path if needed inside notebook
 🎯 Objective
-Compare performance of multiple ML models
-Understand strengths and weaknesses of each algorithm
-Build a solid foundation in classification problems
+Compare multiple machine learning algorithms
+Understand their performance differences
+Gain practical experience in classification problems
 💡 Key Learnings
-Feature importance plays a crucial role in prediction
-Ensemble methods (like Random Forest) often perform better
-Model selection depends on dataset characteristics
-▶️ How to Run
-Open any .ipynb file in Google Colab
-Upload the dataset if not already available
-Run all cells step by step
-📌 Future Improvements
-Hyperparameter tuning
+Feature scaling significantly affects models like KNN and SVM
+Ensemble methods like Random Forest provide better accuracy
+Different models perform differently on the same dataset
+Clean datasets reduce preprocessing complexity
+🔮 Future Improvements
+Hyperparameter tuning (GridSearchCV / RandomizedSearchCV)
 Cross-validation
 Feature engineering
-Deploying the model as a web app
+Model deployment (Flask / FastAPI)
+Adding visualization dashboards
+📌 Conclusion
+
+This project provides a comparative study of multiple machine learning models applied to a real-world dataset. It highlights how model selection and preprocessing techniques impact overall performance.
